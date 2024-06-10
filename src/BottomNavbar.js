@@ -1,8 +1,9 @@
 import React from 'react';
 import { BottomNavigation, BottomNavigationAction } from '@mui/material';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import ShowChartTwoToneIcon from '@mui/icons-material/ShowChartTwoTone';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import MapTwoToneIcon from '@mui/icons-material/MapTwoTone';
+import SchoolIcon from '@mui/icons-material/School';
 import { useNavigate } from 'react-router-dom';
 
 const BottomNavbar = () => {
@@ -31,10 +32,10 @@ const BottomNavbar = () => {
 
     return (
         <BottomNavigation value={value} onChange={handleChange} style={{ position: 'fixed', bottom: 0, width: '100%' }}>
-            <BottomNavigationAction label="Roadmap" icon={<RestoreIcon />} />
-            <BottomNavigationAction label="Profile" icon={<FavoriteIcon />} />
-            <BottomNavigationAction label="Progress" icon={<LocationOnIcon />} />
-            <BottomNavigationAction label="Tutorials" icon={<FavoriteIcon />} />
+            <BottomNavigationAction label="Roadmap" icon={<MapTwoToneIcon />} />
+            <BottomNavigationAction label="Profile" icon={<AccountCircleIcon />} />
+            <BottomNavigationAction label="Progress" icon={<ShowChartTwoToneIcon />} />
+            <BottomNavigationAction label="Tutorials" icon={<SchoolIcon />} />
         </BottomNavigation>
     );
 };

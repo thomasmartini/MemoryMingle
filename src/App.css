@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #F96900;
+}
+
 .App {
   text-align: center;
 }
@@ -34,5 +38,357 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+}
+
+.top-bg {
+  position: -webkit-sticky; /* Voor Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0% 85%);
+  background-color: var(--primary-color);
+  width: 100%;
+  height: 15vh;
+  text-align: center;
+  color: white;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+}
+
+.top-text {
+  margin-top: 20px;
+  color: var(--primary-color);
+}
+
+.page-top-text {
+  margin: 40px !important;
+  color: white;
+}
+
+.middle-text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--primary-color);
+}
+
+.start-button {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 50px;
+  color: white !important;
+}
+
+.start-button > span {
+  color: white;
+}
+
+/*Lesson Css*/
+.back-button {
+  align-self: flex-start;
+  margin-bottom: 20px;
+}
+
+.lessons-list {
+  width: 100%;
+  text-align: left;
+  padding: 20px 20px 70px;
+}
+
+.lesson-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.lesson-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: var(--primary-color);
+  padding: 30px;
+  border-radius: 30px;
+  color: white;
+}
+
+.list-text > p,span {
+  color: white;
+}
+
+.list-text > span {
+  font-size: larger;
+  color: white;
+}
+
+.lesson-content-outlined {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border: 2px solid var(--primary-color);
+  padding: 30px;
+  border-radius: 30px;
+  color: white;
+}
+
+.list-text-outlined > p,span {
+  color: var(--primary-color);
+}
+
+.lesson-image {
+  width: 80px;
+  height: auto;
+  margin-left: 20px;
+}
+
+.exercise-title {
+  margin-top: 20px;
+}
+
+.exercise-description {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin-top: 60px;
+  padding-bottom: 70px;
+}
+
+.vid {
+  border-radius: 30px;
+  width: 80%;
+  border: 3px solid var(--primary-color);
+  margin: 30px 0;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: x-large;
+  padding: 10px;
+}
+
+.exercise-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  color: var(--primary-color);
+  margin-top: 20px;
+  max-width: 70%;
+}
+
+.picture-div {
+  display: flex;
+  justify-content: center;
+  max-width: 65%;
+  text-align: left;
+  color: white;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+  padding: 20px;
+  margin-top: 30px;
+  align-items: center;
+}
+
+/*Complete CSS*/
+
+.complete-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.complete-text {
+  margin-top: 20px;
+  color: green;
+}
+
+/*Profile CSS*/
+
+
+.profile-content {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: start;
+}
+
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-text {
+  width: 45%;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.profile-text h2 {
+  margin: 0;
+}
+
+.profile-text p {
+  margin: 5px 0 0;
+  color: white;
+  font-size: small;
+}
+
+.sections-list {
+  width: 100%;
+  padding: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/*Hallo8899!*/
+
+.section-content {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary-color);
+  padding: 20px;
+  width: 80%;
+  border-radius: 30px;
+  color: white;
+  margin: auto auto 20px;
+}
+
+.section-content-outlined {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  background: white;
+  border: 2px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 30px;
+  color: var(--primary-color);
+  margin: auto auto 20px;
+}
+
+.section-content-outlined > p,span {
+  color: var(--primary-color);
+}
+
+.section-image {
+  width: 80px;
+  height: auto;
+  margin-left: 20px;
+}
+.section-content-outlined .section-text p {
+  color: var(--primary-color);
+}
+
+.section-text {
+  text-align: left;
+}
+
+.section-text p, .section-text span {
+  color: white;
+}
+
+.section-text span {
+  font-size: larger;
+  color: white;
+}
+.welcome-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+  margin-bottom: -7px; /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
   }
 }

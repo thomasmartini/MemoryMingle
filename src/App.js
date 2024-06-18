@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+import React, {useState} from 'react';
+import {BrowserRouter as Router, Route, Routes, useNavigate} from 'react-router-dom';
 import Welcome from './pages/Welcome';
+import Home from './pages/Home';
 import Roadmap from './pages/Roadmap';
 import Lesson from './pages/Lesson';
+import StartSession from './components/StartSession';
+import Exercise from './components/Exercise';
 import Complete from './pages/Complete';
 import Profile from './pages/Profile';
 import Progress from './pages/Progress';
@@ -15,26 +18,23 @@ const App = () => {
 
     return (
         <Router>
-            <div style={{ paddingBottom: showNavbar ? '56px' : '0' }}>
+            <div style={{paddingBottom: showNavbar ? '56px' : '0'}}>
                 <Routes>
-                    <Route path="/" element={<Welcome onStart={() => setShowNavbar(true)} />} />
-                    <Route path="/roadmap" element={<Roadmap />} />
-                    <Route path="/lesson/:lessonId" element={<Lesson />} />
-                    <Route path="/complete/:lessonId" element={<Complete />} />
-                    <Route path="/profile" element={<Profile />} />
-                    <Route path="/progress" element={<Progress />} />
-                    <Route path="/tutorials" element={<Tutorials />} />
+                    <Route path="/" element={<Welcome onStart={() => setShowNavbar(true)}/>}/>
+                    <Route path="/home" element={<Home/>}/>
+                    <Route path="/roadmap" element={<Roadmap/>}/>
+                    <Route path="/lesson/:lessonId" element={<Lesson/>}/>
+                    <Route path="/lesson/:lessonId/start/:exerciseIndex" element={<StartSession/>}/>
+                    <Route path="/lesson/:lessonId/exercise/:exerciseIndex" element={<Exercise/>}/>
+                    <Route path="/complete/:lessonId" element={<Complete/>}/>
+                    <Route path="/profile" element={<Profile/>}/>
+                    <Route path="/progress" element={<Progress/>}/>
+                    <Route path="/tutorials" element={<Tutorials/>}/>
                 </Routes>
-                {showNavbar && <BottomNavbar />}
+                {showNavbar && <BottomNavbar/>}
             </div>
         </Router>
     );
 };
 
 export default App;
-
-
-
-// Welcome -> Draaiboek
-// Profiel, Voortgang, Tutorials
-// Bottom Navbar

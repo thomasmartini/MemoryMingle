@@ -1,87 +1,82 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Typography, IconButton } from '@mui/material';
 import { Button } from 'antd';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import lessons from '../data/lessonsData';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import PlayArrowOutlinedIcon from '@mui/icons-material/PlayArrowOutlined';
+import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
+import LocalFireDepartmentOutlinedIcon from '@mui/icons-material/LocalFireDepartmentOutlined';
+import lessons from '../data/exerciseData.json';
 
 const Lesson = () => {
     const { lessonId } = useParams();
-    const lesson = lessons[lessonId];
-    const exerciseKeys = Object.keys(lesson.exercises);
-    const [exerciseIndex, setExerciseIndex] = useState(0);
+    const lesson = lessons.lessons[lessonId];
     const navigate = useNavigate();
 
-    const nextExercise = () => {
-        if (exerciseIndex < exerciseKeys.length - 1) {
-            setExerciseIndex(exerciseIndex + 1);
-        } else {
-            navigate(`/complete/${lessonId}`);
-        }
-    };
-
-    const prevExercise = () => {
-        if (exerciseIndex > 0) {
-            setExerciseIndex(exerciseIndex - 1);
-        }
-    };
-
-    const currentExerciseKey = exerciseKeys[exerciseIndex];
-    const currentExercise = lesson.exercises[currentExerciseKey];
-
     return (
-        <div className="container">
-            <div className="top-bg">
+        <div className="lesson-container">
+            <div className="lesson-header" style={{ backgroundImage: 'url(https://placehold.co/600x400)' }}>
                 <IconButton
-                    style={{ float: "left", color: "white", fontSize: "x-large", padding: "10px", position: "absolute" }}
-                    color="primary"
+                    className="back-button"
                     aria-label="terug naar roadmap"
                     onClick={() => navigate('/roadmap')}
-                    className="back-button"
                 >
-                    <ArrowBackIcon />
+                    <ArrowBackIosNewIcon />
                 </IconButton>
-                <Typography variant="h4" component="h1" className="page-top-text">
-                    Draaiboek
-                </Typography>
+                <Button className="start-session-button" onClick={() => navigate(`/lesson/${lessonId}/start/0`)}>
+                    <PlayArrowOutlinedIcon />
+                    Start Sessie
+                </Button>
             </div>
-            <div className="exercise-text">
+            <div className="lesson-content">
                 <Typography variant="h4" component="h1" className="lesson-title">
-                    {lesson.title} | {currentExercise.title}
+                    {lesson.title}
                 </Typography>
-                <Typography style={{ fontSize: "medium" }} variant="h6" component="h3" className="exercise-description">
-                    {currentExercise.description}
+                <div style={{ display: "flex", margin: "20px 0" }}>
+                    <Button style={{ pointerEvents: 'none', marginRight: '10px' }} className="session-info-button">
+                        <AccessTimeOutlinedIcon />
+                        {lesson.duration}
+                    </Button>
+                    <Button style={{ pointerEvents: 'none' }} className="session-info-button">
+                        <LocalFireDepartmentOutlinedIcon />
+                        {lesson.difficulty}
+                    </Button>
+                </div>
+                <Typography variant="body1" className="lesson-description">
+                    {lesson.description}
                 </Typography>
-            </div>
-            {currentExercise.url && (
-                <video key={currentExercise.url} className="vid" height="auto" controls>
-                    <source src={currentExercise.url} type="video/mp4" />
-                    Your device does not support the video tag.
-                </video>
-            )}
-            <div className="picture-div">
-                <div>
-                    <Typography style={{ fontSize: "20px" }} variant="h4" component="h3" className="lesson-title">
-                        Foto??
-                    </Typography>
-                    <Typography style={{ fontSize: "15px" }} variant="h6" component="h3" className="exercise-description">
-                        Leg je workout vast met een leuke foto...
-                    </Typography>
+                <Typography variant="h5" component="h2" className="exercises-title">
+                    Oefeningen
+                </Typography>
+                <div className="exercises-list">
+                    {lesson.exercises.map((exercise, index) => (
+                        <div key={index} className="exercise-item">
+                            <img src="https://placehold.co/100x100" alt="exercise" className="exercise-image" />
+                            <div className="exercise-details">
+                                <Typography variant="h6" component="h3" className="exercise-title">
+                                    {exercise.title}
+                                </Typography>
+                                <div style={{ display: "flex", alignItems: "center" }}>
+                                    <AccessTimeOutlinedIcon style={{ marginRight: "5px", color: "#F96900", fontSize: "18px" }} />
+                                    <Typography variant="body2" className="exercise-duration">
+                                        {exercise.duration}
+                                    </Typography>
+                                </div>
+                                <Typography variant="body2" className="exercise-description">
+                                    {exercise.description}
+                                </Typography>
+                                <Typography variant="body2" className="exercise-link">
+                                    Ga naar oefening >
+                                </Typography>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div>
-                    <img src="/images/camera.png" alt="Picture Icon" className="lesson-image" />
-                </div>
-            </div>
-            <div className="navigation-buttons">
-                <Button variant="contained" color="primary" onClick={prevExercise} disabled={exerciseIndex === 0}>
-                    Vorige
-                </Button>
-                <Button variant="contained" color="primary" onClick={nextExercise}>
-                    Volgende
-                </Button>
             </div>
         </div>
     );
 };
 
 export default Lesson;
+
+

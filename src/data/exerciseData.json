@@ -1,0 +1,276 @@
+{
+  "lessons": [
+    {
+      "title": "Flexibiliteit",
+      "description": "Verbeteren van flexibiliteit, verminderen van spierspanning en bevorderen van ontspanning.",
+      "difficulty": "Gemiddeld",
+      "duration": "30 min",
+      "image": "/images/flexibility.png",
+      "exercises": [
+        {
+          "title": "Nek Stretchen",
+          "duration": "5 min",
+          "video": "/videos/neck-stretch.mp4"
+        },
+        {
+          "title": "Schouder Stretchen",
+          "duration": "5 min",
+          "video": "/videos/shoulder-stretch.mp4"
+        },
+        {
+          "title": "Rug Stretchen",
+          "duration": "5 min",
+          "video": "/videos/back-stretch.mp4"
+        },
+        {
+          "title": "Hamstring Stretchen",
+          "duration": "5 min",
+          "video": "/videos/hamstring-stretch.mp4"
+        },
+        {
+          "title": "Kuit Stretchen",
+          "duration": "5 min",
+          "video": "/videos/calf-stretch.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Beenoefeningen",
+      "description": "Versterken van de beenspieren om mobiliteit en balans te verbeteren.",
+      "difficulty": "Gemakkelijk",
+      "duration": "25 min",
+      "image": "/images/leg.png",
+      "exercises": [
+        {
+          "title": "Zijwaartse Beenheffingen",
+          "duration": "5 min",
+          "video": "/videos/side-leg-lifts.mp4"
+        },
+        {
+          "title": "Kniebuigingen",
+          "duration": "5 min",
+          "video": "/videos/knee-bends.mp4"
+        },
+        {
+          "title": "Hiel Tot Zit",
+          "duration": "5 min",
+          "video": "/videos/heel-to-sit.mp4"
+        },
+        {
+          "title": "Tenen en Hielen Staan",
+          "duration": "5 min",
+          "video": "/videos/toe-heel-stands.mp4"
+        },
+        {
+          "title": "Stap op de Plaats",
+          "duration": "5 min",
+          "video": "/videos/march-in-place.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Balans",
+      "description": "Verbeteren van evenwicht en stabiliteit om vallen te voorkomen.",
+      "difficulty": "Gemakkelijk",
+      "duration": "20 min",
+      "image": "/images/balance.png",
+      "exercises": [
+        {
+          "title": "Enkelcirkel",
+          "duration": "4 min",
+          "video": "/videos/ankle-circles.mp4"
+        },
+        {
+          "title": "Zijwaartse Stap",
+          "duration": "4 min",
+          "video": "/videos/side-step.mp4"
+        },
+        {
+          "title": "Hak tot Teen Lopen",
+          "duration": "4 min",
+          "video": "/videos/heel-to-toe-walk.mp4"
+        },
+        {
+          "title": "Gewicht Verplaatsen",
+          "duration": "4 min",
+          "video": "/videos/weight-shift.mp4"
+        },
+        {
+          "title": "Staan op Eén Been",
+          "duration": "4 min",
+          "video": "/videos/one-leg-stand.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Lenigheid",
+      "description": "Verbeteren van lenigheid en bewegingsbereik.",
+      "difficulty": "Gemakkelijk",
+      "duration": "25 min",
+      "image": "/images/flexibility.jpg",
+      "exercises": [
+        {
+          "title": "Arm Cirkel",
+          "duration": "5 min",
+          "video": "/videos/arm-circles.mp4"
+        },
+        {
+          "title": "Zijwaartse Rek",
+          "duration": "5 min",
+          "video": "/videos/side-stretch.mp4"
+        },
+        {
+          "title": "Pols Cirkel",
+          "duration": "5 min",
+          "video": "/videos/wrist-circles.mp4"
+        },
+        {
+          "title": "Enkel Cirkel",
+          "duration": "5 min",
+          "video": "/videos/ankle-circles.mp4"
+        },
+        {
+          "title": "Heup Cirkel",
+          "duration": "5 min",
+          "video": "/videos/hip-circles.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Armoefeningen",
+      "description": "Versterken van de armspieren om dagelijkse activiteiten te vergemakkelijken.",
+      "difficulty": "Gemiddeld",
+      "duration": "20 min",
+      "image": "/images/arm-exercises.jpg",
+      "exercises": [
+        {
+          "title": "Biceps Curl",
+          "duration": "4 min",
+          "video": "/videos/biceps-curl.mp4"
+        },
+        {
+          "title": "Triceps Extensie",
+          "duration": "4 min",
+          "video": "/videos/triceps-extension.mp4"
+        },
+        {
+          "title": "Zijwaartse Armheffingen",
+          "duration": "4 min",
+          "video": "/videos/side-arm-lifts.mp4"
+        },
+        {
+          "title": "Voorwaartse Armheffingen",
+          "duration": "4 min",
+          "video": "/videos/front-arm-lifts.mp4"
+        },
+        {
+          "title": "Pols Krullen",
+          "duration": "4 min",
+          "video": "/videos/wrist-curls.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Core Stability",
+      "description": "Versterken van de kernspieren om de algehele stabiliteit en houding te verbeteren.",
+      "difficulty": "Gemiddeld",
+      "duration": "30 min",
+      "image": "/images/core-stability.jpg",
+      "exercises": [
+        {
+          "title": "Zit-Ups",
+          "duration": "6 min",
+          "video": "/videos/sit-ups.mp4"
+        },
+        {
+          "title": "Plank",
+          "duration": "6 min",
+          "video": "/videos/plank.mp4"
+        },
+        {
+          "title": "Been Heffingen",
+          "duration": "6 min",
+          "video": "/videos/leg-lifts.mp4"
+        },
+        {
+          "title": "Fietsen Liggend",
+          "duration": "6 min",
+          "video": "/videos/bicycle-crunches.mp4"
+        },
+        {
+          "title": "Ruglig Been Heffingen",
+          "duration": "6 min",
+          "video": "/videos/supine-leg-lifts.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Cardio Oefeningen",
+      "description": "Verhogen van de hartslag en het verbeteren van de cardiovasculaire gezondheid.",
+      "difficulty": "Gemakkelijk",
+      "duration": "20 min",
+      "image": "/images/cardio.jpg",
+      "exercises": [
+        {
+          "title": "Wandelen op de Plaats",
+          "duration": "4 min",
+          "video": "/videos/march-in-place.mp4"
+        },
+        {
+          "title": "Knie Heffingen",
+          "duration": "4 min",
+          "video": "/videos/knee-highs.mp4"
+        },
+        {
+          "title": "Stap Touch",
+          "duration": "4 min",
+          "video": "/videos/step-touch.mp4"
+        },
+        {
+          "title": "Zijwaartse Stap",
+          "duration": "4 min",
+          "video": "/videos/side-step.mp4"
+        },
+        {
+          "title": "Hiel naar Bil",
+          "duration": "4 min",
+          "video": "/videos/heel-to-butt.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Ontspanning en Ademhaling",
+      "description": "Bevorderen van ontspanning en het verbeteren van de ademhalingstechnieken.",
+      "difficulty": "Gemakkelijk",
+      "duration": "15 min",
+      "image": "/images/relaxation.jpg",
+      "exercises": [
+        {
+          "title": "Diep Ademhalen",
+          "duration": "3 min",
+          "video": "/videos/deep-breathing.mp4"
+        },
+        {
+          "title": "Schouder Rollen",
+          "duration": "3 min",
+          "video": "/videos/shoulder-rolls.mp4"
+        },
+        {
+          "title": "Nek Cirkel",
+          "duration": "3 min",
+          "video": "/videos/neck-circles.mp4"
+        },
+        {
+          "title": "Arm Strekkingen",
+          "duration": "3 min",
+          "video": "/videos/arm-stretches.mp4"
+        },
+        {
+          "title": "Zittende Twist",
+          "duration": "3 min",
+          "video": "/videos/seated-twist.mp4"
+        }
+      ]
+    }
+  ]
+}

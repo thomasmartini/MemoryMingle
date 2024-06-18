@@ -1,7 +1,8 @@
 import React from 'react';
-import { Typography, List, ListItem, ListItemText } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
-import lessons from '../data/lessonsData'; // Importeer het lesobject
+import {Typography, List, ListItem} from '@mui/material';
+import {Button} from 'antd';
+import {useNavigate} from 'react-router-dom';
+import lessons from '../data/exerciseData.json';
 
 const Roadmap = () => {
     const navigate = useNavigate();
@@ -12,27 +13,38 @@ const Roadmap = () => {
 
     return (
         <div className="container">
-            <div className="top-bg">
-                <Typography variant="h4" component="h1" className="page-top-text">
-                    Draaiboek
-                </Typography>
-            </div>
-            <div className="lessons-list" style={{ width: "85%" }}>
-                <List>
-                    {lessons.map((lesson, index) => (
+            <div className="lessons-list">
+                <List className="lessons-grid">
+                    <Button className="lesson-button">Overzicht</Button>
+                    <Button className="lesson-button">Afgerond</Button>
+                    {lessons.lessons.map((lesson, index) => (
                         <ListItem
                             key={index}
                             button
                             onClick={() => handleLessonClick(index)}
                             className="lesson-item"
                         >
-                            <div className={index % 2 === 0 ? "lesson-content" : "lesson-content-outlined"}>
-                                <ListItemText
-                                    className={index % 2 === 0 ? "list-text" : "list-text-outlined"}
-                                    primary={lesson.title}
-                                    secondary={lesson.description}
-                                />
-                                <img src={lesson.imageUrl} alt={lesson.title} className="lesson-image" />
+                            <div
+                                className="lesson-content"
+                                style={{backgroundImage: `url(${lesson.image})`}}
+                            >
+                                <div className="lesson-overlay">
+                                    <Typography variant="h6" className="lesson-title">
+                                        {lesson.title}
+                                    </Typography>
+                                    <div className="lesson-overlay-info">
+                                        <div>
+                                            <Typography variant="body2" className="lesson-info">
+                                                {lesson.duration}
+                                            </Typography>
+                                        </div>
+                                        <div>
+                                            <Typography variant="body2" className="lesson-info">
+                                                {lesson.difficulty}
+                                            </Typography>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </ListItem>
                     ))}
@@ -43,6 +55,7 @@ const Roadmap = () => {
 };
 
 export default Roadmap;
+
 
 
 

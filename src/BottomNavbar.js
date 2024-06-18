@@ -1,10 +1,11 @@
 import React from 'react';
-import { BottomNavigation, BottomNavigationAction } from '@mui/material';
-import ShowChartTwoToneIcon from '@mui/icons-material/ShowChartTwoTone';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import MapTwoToneIcon from '@mui/icons-material/MapTwoTone';
-import SchoolIcon from '@mui/icons-material/School';
-import { useNavigate } from 'react-router-dom';
+import {BottomNavigation, BottomNavigationAction} from '@mui/material';
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import EmojiEventsOutlinedIcon from '@mui/icons-material/EmojiEventsOutlined';
+import PermIdentityOutlinedIcon from '@mui/icons-material/PermIdentityOutlined';
+import GroupsOutlinedIcon from '@mui/icons-material/GroupsOutlined';
+import PhotoAlbumOutlinedIcon from '@mui/icons-material/PhotoAlbumOutlined';
+import {useNavigate} from 'react-router-dom';
 
 const BottomNavbar = () => {
     const [value, setValue] = React.useState(0);
@@ -14,16 +15,19 @@ const BottomNavbar = () => {
         setValue(newValue);
         switch (newValue) {
             case 0:
-                navigate('/roadmap');
+                navigate('/home');
                 break;
             case 1:
-                navigate('/profile');
+                navigate('/roadmap');
                 break;
             case 2:
-                navigate('/progress');
+                navigate('/roadmap');
                 break;
             case 3:
-                navigate('/tutorials');
+                navigate('/progress');
+                break;
+            case 4:
+                navigate('/profile');
                 break;
             default:
                 navigate('/');
@@ -31,11 +35,16 @@ const BottomNavbar = () => {
     };
 
     return (
-        <BottomNavigation value={value} onChange={handleChange} style={{ position: 'fixed', bottom: 0, width: '100%' }}>
-            <BottomNavigationAction label="Roadmap" icon={<MapTwoToneIcon />} />
-            <BottomNavigationAction label="Profile" icon={<AccountCircleIcon />} />
-            <BottomNavigationAction label="Progress" icon={<ShowChartTwoToneIcon />} />
-            <BottomNavigationAction label="Tutorials" icon={<SchoolIcon />} />
+        <BottomNavigation
+            value={value}
+            onChange={handleChange}
+            style={{position: 'fixed', bottom: 0, width: '100%'}}
+        >
+            <BottomNavigationAction label="Home" icon={<HomeOutlinedIcon/>}/>
+            <BottomNavigationAction label="Roadmap" icon={<PhotoAlbumOutlinedIcon/>}/>
+            <BottomNavigationAction label="Progress" icon={<GroupsOutlinedIcon/>}/>
+            <BottomNavigationAction label="Profile" icon={<EmojiEventsOutlinedIcon/>}/>
+            <BottomNavigationAction label="Tutorials" icon={<PermIdentityOutlinedIcon/>}/>
         </BottomNavigation>
     );
 };

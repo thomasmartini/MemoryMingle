@@ -8,7 +8,7 @@ const Welcome = ({ onStart }) => {
 
     const handleStart = () => {
         onStart();
-        navigate('/roadmap');
+        navigate('/home');
     };
 
     return (

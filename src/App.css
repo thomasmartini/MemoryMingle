@@ -1,394 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* Pas de font toe op het gehele document */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Andere algemene stijlen */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Specifieke stijlen voor verschillende elementen */
+button {
+    font-family: 'Poppins', sans-serif;
+}
+
+p, a, span, div {
+    font-family: 'Poppins', sans-serif;
+}
+
 :root {
-  --primary-color: #F96900;
+    --primary-color: #F96900;
+    --secondary-color: #092534;
+    --text-color: #fff;
+    --text-color-dark: #1E1E1E;
+    --overlay-color: rgba(251, 251, 251, 0.75);
+    --overlay-text-color: #21201E;
 }
 
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    text-align: center;
 }
 
 .top-bg {
-  position: -webkit-sticky; /* Voor Safari */
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0% 85%);
-  background-color: var(--primary-color);
-  width: 100%;
-  height: 15vh;
-  text-align: center;
-  color: white;
-  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
+    position: -webkit-sticky; /* Voor Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 80% 100%, 0% 85%);
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 15vh;
+    text-align: center;
+    color: white;
+    filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.5));
 }
 
 .top-text {
-  margin-top: 20px;
-  color: var(--primary-color);
+    margin-top: 20px;
+    color: var(--primary-color);
 }
 
 .page-top-text {
-  margin: 40px !important;
-  color: white;
+    margin: 40px !important;
+    color: white;
 }
 
 .middle-text {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--primary-color);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
 }
 
 .start-button {
-  background-color: var(--primary-color) !important;
-  border-color: var(--primary-color) !important;
-  width: 80%;
-  max-width: 300px;
-  margin-bottom: 50px;
-  color: white !important;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 50px;
+    color: white !important;
 }
 
 .start-button > span {
-  color: white;
+    color: white;
 }
 
-/*Lesson Css*/
+/* Lesson.css */
+.lesson-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.lesson-header {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    padding: 0 20px;
+}
+
 .back-button {
-  align-self: flex-start;
-  margin-bottom: 20px;
+    top: 20px;
+    left: 20px;
+    float: left;
+    background: #092534 !important;
+    border-radius: 10px !important;
+}
+
+.back-button > svg {
+    font-size: large;
+    color: var(--text-color) !important;
+}
+
+.start-session-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.start-session-button > span {
+    color: var(--text-color);
+}
+
+.start-session-button > svg {
+    font-size: 30px;
+}
+
+.session-info-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border-radius: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.session-info-button > span {
+    color: var(--primary-color);
+}
+
+.session-info-button > svg {
+    font-size: 22px;
+}
+
+.lesson-info {
+    margin: 10px 0;
+    font-size: 14px;
+    color: grey;
+}
+
+.lesson-description {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    color: var(--text-color-dark);
 }
 
 .lessons-list {
-  width: 100%;
-  text-align: left;
-  padding: 20px 20px 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.lessons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 20px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
 }
 
 .lesson-item {
-  border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lesson-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: var(--primary-color);
-  padding: 30px;
-  border-radius: 30px;
-  color: white;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
 }
 
-.list-text > p,span {
-  color: white;
+.lesson-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background: var(--overlay-color);
+    color: var(--overlay-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
+    padding-left: 10px;
 }
 
-.list-text > span {
-  font-size: larger;
-  color: white;
+.lesson-title {
+    text-align: left;
+    font-size: 14px !important;
+    margin: 0;
+    font-weight: 600 !important;
 }
 
-.lesson-content-outlined {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background: white;
-  border: 2px solid var(--primary-color);
-  padding: 30px;
-  border-radius: 30px;
-  color: white;
+.lesson-info-div {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    background: var(--secondary-color);
+    margin-right: 10px;
+    border-radius: 30px;
+    color: white;
 }
 
-.list-text-outlined > p,span {
-  color: var(--primary-color);
+.lesson-info-div > button > svg, span {
+    color: white;
 }
 
-.lesson-image {
-  width: 80px;
-  height: auto;
-  margin-left: 20px;
+.lesson-overlay-info {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
 }
 
-.exercise-title {
-  margin-top: 20px;
+.lesson-info {
+    font-size: 12px !important;
+    margin: 0;
 }
 
-.exercise-description {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.list-text {
+    text-align: left;
 }
+
+.lesson-button {
+    width: 80%;
+    border-radius: 30px;
+    margin: 10px auto auto;
+    background: var(--primary-color);
+}
+
+.lesson-button > span {
+    color: white;
+}
+
 
 .navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 300px;
-  margin-top: 60px;
-  padding-bottom: 70px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 60px;
+    padding-bottom: 70px;
 }
 
 .vid {
-  border-radius: 30px;
-  width: 80%;
-  border: 3px solid var(--primary-color);
-  margin: 30px 0;
+    border-radius: 30px;
+    width: 80%;
+    border: 3px solid var(--primary-color);
+    margin: 30px 0;
 }
 
 .back-button {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: white;
-  font-size: x-large;
-  padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-size: x-large;
+    padding: 10px;
 }
 
-.exercise-text {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  color: var(--primary-color);
-  margin-top: 20px;
-  max-width: 70%;
+.exercises-title {
+    margin: 30px 0 10px 0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: left;
+    color: var(--text-color-dark);
+}
+
+.exercises-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exercise-link {
+    text-align: right;
+    color: var(--text-color-dark);
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.exercise-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+    border-radius: 15px;
+    text-align: left;
+    background-color: #f9f9f9;
+}
+
+.exercise-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.exercise-details {
+    flex-grow: 1;
+}
+
+.exercise-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.exercise-duration {
+    color: var(--text-color-dark);
+    font-size: 14px;
+}
+
+.exercise-description {
+    font-size: 14px;
+    color: grey;
 }
 
 .picture-div {
-  display: flex;
-  justify-content: center;
-  max-width: 65%;
-  text-align: left;
-  color: white;
-  background-color: var(--primary-color);
-  border-radius: 30px;
-  padding: 20px;
-  margin-top: 30px;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: 65%;
+    text-align: left;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 30px;
+    align-items: center;
 }
 
 /*Complete CSS*/
 
 .complete-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #f0f0f0;
 }
 
 .complete-text {
-  margin-top: 20px;
-  color: green;
+    margin-top: 20px;
+    color: green;
 }
 
 /*Profile CSS*/
 
 
 .profile-content {
-  display: flex;
-  margin-top: 40px;
-  justify-content: center;
-  align-items: start;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: start;
 }
 
 .profile-pic {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
 }
 
 .profile-text {
-  width: 45%;
-  text-align: left;
-  margin-bottom: 20px;
+    width: 45%;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .profile-text h2 {
-  margin: 0;
+    margin: 0;
 }
 
 .profile-text p {
-  margin: 5px 0 0;
-  color: white;
-  font-size: small;
+    margin: 5px 0 0;
+    color: white;
+    font-size: small;
 }
 
 .sections-list {
-  width: 100%;
-  padding: 20px;
-  overflow-y: auto;
-  flex-grow: 1;
+    width: 100%;
+    padding-top: 20px;
+    overflow-y: auto;
+    flex-grow: 1;
 }
 
 /*Hallo8899!*/
 
 .section-content {
-  display: flex;
-  text-align: left;
-  justify-content: space-between;
-  align-items: center;
-  background: var(--primary-color);
-  padding: 20px;
-  width: 80%;
-  border-radius: 30px;
-  color: white;
-  margin: auto auto 20px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    padding: 15px;
+    width: 80%;
+    border-radius: 30px;
+    color: white;
+    margin: auto auto 20px;
 }
 
 .section-content-outlined {
-  display: flex;
-  text-align: left;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%;
-  background: white;
-  border: 2px solid var(--primary-color);
-  padding: 20px;
-  border-radius: 30px;
-  color: var(--primary-color);
-  margin: auto auto 20px;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    background: white;
+    border: 2px solid var(--primary-color);
+    padding: 15px;
+    border-radius: 30px;
+    color: var(--primary-color);
+    margin: auto auto 20px;
 }
 
-.section-content-outlined > p,span {
-  color: var(--primary-color);
+.section-content-outlined > p, span {
+    color: var(--primary-color);
 }
 
 .section-image {
-  width: 80px;
-  height: auto;
-  margin-left: 20px;
+    width: 100px;
+    height: auto;
+    margin-left: 20px;
 }
+
 .section-content-outlined .section-text p {
-  color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .section-text {
-  text-align: left;
+    text-align: left;
 }
 
 .section-text p, .section-text span {
-  color: white;
+    color: white;
 }
 
 .section-text span {
-  font-size: larger;
-  color: white;
+    font-size: larger;
+    color: white;
 }
+
 .welcome-container {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
 }
 
 .content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: white;
-  background-color: white;
-  padding: 20px;
-  width: 80%;
-  border-radius: 10px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
 }
 
 .waves {
-  position: relative;
-  width: 100%;
-  height: 25vh;
-  margin-bottom: -7px; /*Fix for safari gap*/
-  min-height: 100px;
-  max-height: 150px;
+    position: relative;
+    width: 100%;
+    height: 25vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
 }
 
 .parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
 }
+
 .parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
+    animation-delay: -2s;
+    animation-duration: 7s;
 }
+
 .parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
+    animation-delay: -3s;
+    animation-duration: 10s;
 }
+
 .parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
+    animation-delay: -4s;
+    animation-duration: 13s;
 }
+
 .parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
+    animation-delay: -5s;
+    animation-duration: 20s;
 }
+
 @keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
 }
+
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
-  .waves {
-    height: 40px;
-    min-height: 40px;
-  }
-  .content {
-    height: 30vh;
-  }
-  h1 {
-    font-size: 24px;
-  }
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
+
+/*Home CSS*/
+.home-title {
+    margin-bottom: 20px;
+    font-size: 24px !important;
+}
+
+.home-card {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px !important;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.home-card-photo {
+    position: relative;
+    width: 165px;
+    max-width: 600px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px !important;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.home-card-progress {
+    position: relative;
+    width: 165px;
+    max-width: 600px;
+    height: 135px;
+    background: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px !important;
+    margin: 10px 0;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.home-card-message {
+    position: relative;
+    width: 165px;
+    max-width: 600px;
+    height: 54px;
+    background: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px !important;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.progress-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.progress-text {
+    display: flex;
+   align-items: baseline;
+    margin-left: 10px;
+}
+
+.home-card-tip {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 75px;
+    background: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px !important;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background: var(--overlay-color);
+    color: var(--overlay-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 14px !important;
+    margin: 0 !important;;
+    text-align: left;
+}
+
+.card-title-small {
+    font-size: 12px !important;
+    margin: 0 !important;;
+    text-align: left;
+}
+
+.card-info {
+    font-size: 10px !important;;
+    margin-right: 10px !important;
+    text-align: left;
+}
+
+.home-card img {
+    border-radius: 15px;
 }
